@@ -12,3 +12,135 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .text-center-xs {
+    text-align: center;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .text-center-lg {
+    text-align: center;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .text-center-xs {
+    text-align: center;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .text-center-lg {
+    text-align: center;
+  }
+
+  .text-left-xs {
+    text-align: left;
+  }
+  .text-left-sm {
+    text-align: left;
+  }
+  .text-left-md {
+    text-align: left;
+  }
+  .text-left-lg {
+    text-align: left;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .text-center-xs {
+    text-align: center;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .text-center-lg {
+    text-align: center;
+  }
+
+  .text-left-xs {
+    text-align: left;
+  }
+  .text-left-sm {
+    text-align: left;
+  }
+  .text-left-md {
+    text-align: left;
+  }
+  .text-left-lg {
+    text-align: left;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  .text-center-xs {
+    text-align: center;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .text-center-lg {
+    text-align: center;
+  }
+
+  .text-left-xs {
+    text-align: left;
+  }
+  .text-left-sm {
+    text-align: left;
+  }
+  .text-left-md {
+    text-align: left;
+  }
+  .text-left-lg {
+    text-align: left;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  .text-center-xs {
+    text-align: center;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .text-center-lg {
+    text-align: center;
+  }
+
+  .text-left-xs {
+    text-align: left;
+  }
+  .text-left-sm {
+    text-align: left;
+  }
+  .text-left-md {
+    text-align: left;
+  }
+  .text-left-lg {
+    text-align: left;
+  }
+}

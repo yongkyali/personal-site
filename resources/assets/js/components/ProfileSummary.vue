@@ -1,15 +1,36 @@
 <template>
-  <div class="container text-center ">
+  <div class="container banner">
     <div class="row full-height justify-content-center align-items-center">
-      <div class="row">
+      <div class="row text-center-sm text-left-md">
         <div class="col-12">
           <h1>Hello.</h1>
         </div>
         <div class="col-12">
           <p>
             My name is Yongky. I am a software developer.<br/>
-            Currently live in <a href="https://en.wikipedia.org/wiki/Medan" target="_blank">Medan, North Sumatra, Indonesia.</a><br/>
-            This page is still under development 🙏
+            I 
+            <vue-typer
+              :text='["do codes.","swim a lot.","drink coffee.","am a dreamer."]'
+              :repeat='Infinity'
+              :shuffle='false'
+              initial-action='erasing'
+              :pre-type-delay='70'
+              :type-delay='70'
+              :pre-erase-delay='1500'
+              :erase-delay='50'
+              erase-style='backspace'
+              :erase-on-complete='false'
+              caret-animation='blink'
+            ></vue-typer><br/>
+            <h6 class="maniac-link-group">
+              <a class="maniac-link"  href="#">About</a> / 
+              <a class="maniac-link" href="#">Projects</a> / 
+              <a class="maniac-link" href="#">Contact</a>
+              <!-- <a class="maniac-link" v-on:mouseover="active = !active" v-bind:class="{ dark: isHover }" href="#">About</a> / 
+              <a class="maniac-link" v-on:mouseover="active = !active" v-bind:class="{ dark: isHover }" href="#">Projects</a> / 
+              <a class="maniac-link" v-on:mouseover="active = !active" v-bind:class="{ dark: isHover }" href="#">Contact</a> -->
+            </h6>
+            <!-- Currently live in <a href="https://en.wikipedia.org/wiki/Medan" target="_blank">Medan, North Sumatra, Indonesia.</a><br/> -->
           </p>
         </div>
         <div class="col-12">
@@ -24,25 +45,42 @@
 </template>
 
 <script>
+  import { VueTyper } from 'vue-typer'
   export default {
+    data : {
+      active: false,
+    },
     mounted() {
       // console.log('Component Summary mounted.')
+    },
+    components: {
+      VueTyper
+    },
+    methods: {
+      mouseOver() {
+
+      }
     }
   }
 </script>
 
-<style>
+<style lang="scss">
   .full-height {
     height: 100vh;
-  }
-
-  .text-center {
-    text-align: center;
   }
 
   .mdi {
     font-size: 24px;
     margin: 0 5px;
     color: #212529;
+  }
+
+  .maniac-link-group {
+    a {
+      color: #abbdcf;
+      &:hover {
+        color: #212529;
+      }
+    }
   }
 </style>
