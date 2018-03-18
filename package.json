@@ -8,7 +8,6 @@
     },
     "private": true,
     "scripts": {
-        "preinstall": "npm install",
         "postinstall": "npm run prod",
         "start": "npm run production",
         "dev": "npm run development",
