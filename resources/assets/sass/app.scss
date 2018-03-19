@@ -13,6 +13,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.full-height {
+  height: 100vh;
+}
+
+.maniac-link-group {
+  a {
+    color: #abbdcf;
+    &:hover {
+      color: #212529;
+    }
+  }
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
   .text-center-xs {

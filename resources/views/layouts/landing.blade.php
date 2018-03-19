@@ -1,5 +1,5 @@
 @extends('master')
 
 @section('content')
-  <profile-summary></profile-summary>
+  <router-view></router-view>
 @endsection

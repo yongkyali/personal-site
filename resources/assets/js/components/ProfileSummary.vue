@@ -21,16 +21,12 @@
               erase-style='backspace'
               :erase-on-complete='false'
               caret-animation='blink'
-            ></vue-typer><br/>
-            <h6 class="maniac-link-group">
-              <a class="maniac-link"  href="#">About</a> / 
-              <a class="maniac-link" href="#">Projects</a> / 
-              <a class="maniac-link" href="#">Contact</a>
-              <!-- <a class="maniac-link" v-on:mouseover="active = !active" v-bind:class="{ dark: isHover }" href="#">About</a> / 
-              <a class="maniac-link" v-on:mouseover="active = !active" v-bind:class="{ dark: isHover }" href="#">Projects</a> / 
-              <a class="maniac-link" v-on:mouseover="active = !active" v-bind:class="{ dark: isHover }" href="#">Contact</a> -->
-            </h6>
-            <!-- Currently live in <a href="https://en.wikipedia.org/wiki/Medan" target="_blank">Medan, North Sumatra, Indonesia.</a><br/> -->
+            ></vue-typer><br/><br/>
+            <span class="maniac-link-group">
+              <router-link :to="{ name: 'about' }">About </router-link> /
+              <router-link :to="{ name: 'project' }"> Projects </router-link> /
+              <router-link :to="{ name: 'contact' }"> Contact </router-link>
+            </span>
           </p>
         </div>
         <div class="col-12">
@@ -65,22 +61,9 @@
 </script>
 
 <style lang="scss">
-  .full-height {
-    height: 100vh;
-  }
-
   .mdi {
     font-size: 24px;
     margin: 0 5px;
     color: #212529;
-  }
-
-  .maniac-link-group {
-    a {
-      color: #abbdcf;
-      &:hover {
-        color: #212529;
-      }
-    }
   }
 </style>
