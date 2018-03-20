@@ -17,14 +17,17 @@
   height: 100vh;
 }
 
-.maniac-link-group {
-  a {
-    color: #abbdcf;
-    &:hover {
-      color: #212529;
-    }
+a {
+  color: #abbdcf;
+  &:hover {
+    color: #212529;
   }
 }
+
+.small {
+  font-size: .6rem;
+}
+
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 

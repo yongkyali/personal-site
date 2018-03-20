@@ -1,16 +1,16 @@
 <template>
   <div class="container banner">
     <div class="row full-height justify-content-center align-items-center">
-      <div class="row text-center-sm text-left-md">
+      <div class="row text-center-sm">
         <div class="col-12">
           <h1>Hello.</h1>
         </div>
         <div class="col-12">
           <p>
-            My name is Yongky. I am a software developer.<br/>
+            My name is Yongky Ali.<br/>
             I 
             <vue-typer
-              :text='["do codes.","swim a lot.","drink coffee.","am a dreamer."]'
+              :text='["am a software developer.","do codes.","swim a lot.","drink coffee.","am a dreamer."]'
               :repeat='Infinity'
               :shuffle='false'
               initial-action='erasing'
@@ -35,6 +35,13 @@
           <a href="https://instagram.com/yongkyliee" target="_blank"><i class="mdi mdi-instagram" aria-hidden="true"></i></a>
           <a href="https://id.linkedin.com/in/yongkylie" target="_blank"><i class="mdi mdi-linkedin" aria-hidden="true"></i></a>
         </div>
+        <div class="col-12">
+          <p class="small">
+            This page currently build with Laravel and Vue.JS.<br/>
+            This page is open sourced, you can fork it <a href="https://github.com/yongkylie/personal-site" target="_blank">here</a> and make it yours. :)
+          </p>
+        </div>
+        
       </div>
     </div>
   </div>

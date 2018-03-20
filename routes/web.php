@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.landing');
-});
+// Route::get('/', function () {
+//     return view('layouts.landing');
+// });
+
+
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
