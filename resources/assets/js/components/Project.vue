@@ -7,6 +7,7 @@
           <p>
             Yongky currenly do develop, manage, plan as an IT Manager at
             <a href="https://www.executivemedia.group" target="_blank">Executive Media</a>.
+            <br />
             Here are some reference the projects:
             <li>
               <a href="https://www.executivemafia.com" target="_blank">Executive Mafia</a>

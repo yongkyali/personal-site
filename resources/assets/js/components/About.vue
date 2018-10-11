@@ -12,12 +12,13 @@
             Executive Mafia</a>.
             <br/>
             Yongky build websites, bots, and some other software development stuff
-            everyday as a fulltime job at office. He also spend some time contributing
-            to open source projects and stackoverflow sometimes when he want to procastinate 
-            <small>(only a little)</small>.
+            everyday as a fulltime job at office.
+            <br />
+            He spend some time contributing to open source projects at Github and stackoverflow.
             <br/>
-            He is an open-minded guy and hard working. Some of his hobbies are swimming
-            and doing codes.
+            He is an open-minded guy and hard working.
+            <br />
+            His hobbies are swimming and doing codes.
             <br/>
           </p>
         </div>
