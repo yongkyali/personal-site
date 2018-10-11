@@ -8,11 +8,17 @@
             Yongky Ali is a software developer who currently lives in <a href="https://en.wikipedia.org/wiki/Medan" target="_blank">Medan, North Sumatra, Indonesia.</a>
           </p>
           <p>
-            He currently work as IT Manager at <a href="https://executivemafia.com/about" target="_blank">Executive Mafia</a>.<br/>
-            Most of his time spent sitting and glued into computer screen while drinking warm coffee.<br/>
-            Yongky make websites, bots, and some other software development stuff.<br/>
-            His hobby is swimming (although he is not a good swimmer).<br/>
-            He is an open-minded, hard working and always driven to create something new type of person.<br/>
+            He currently work as IT Manager at <a href="https://executivemafia.com/about" target="_blank">
+            Executive Mafia</a>.
+            <br/>
+            Yongky build websites, bots, and some other software development stuff
+            everyday as a fulltime job at office. He also spend some time contributing
+            to open source projects and stackoverflow sometimes when he want to procastinate 
+            <small>(only a little)</small>.
+            <br/>
+            He is an open-minded guy and hard working. Some of his hobbies are swimming
+            and doing codes.
+            <br/>
           </p>
         </div>
         <div class="col-12">

@@ -10,7 +10,7 @@
             My name is Yongky Ali.<br/>
             I 
             <vue-typer
-              :text='["am a software developer.","do codes.","swim a lot.","drink coffee.","am a dreamer."]'
+              :text='["am a software developer.","do codes.","swim a lot.","drink coffee."]'
               :repeat='Infinity'
               :shuffle='false'
               initial-action='erasing'
@@ -34,13 +34,14 @@
           <a href="https://twitter.com/yongkylie" target="_blank"><i class="mdi mdi-twitter" aria-hidden="true"></i></a>
           <a href="https://instagram.com/yongkyliee" target="_blank"><i class="mdi mdi-instagram" aria-hidden="true"></i></a>
           <a href="https://id.linkedin.com/in/yongkylie" target="_blank"><i class="mdi mdi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://stackoverflow.com/users/7498283/yongky" target="_blank"><i class="mdi mdi-stack-overflow" aria-hidden="true"></i></a>
         </div>
-        <div class="col-12">
+        <!-- <div class="col-12">
           <p class="small">
             This page currently build with Laravel and Vue.JS.<br/>
             This page is open sourced, you can fork it <a href="https://github.com/yongkylie/personal-site" target="_blank">here</a> and make it yours. :)
           </p>
-        </div>
+        </div> -->
         
       </div>
     </div>
