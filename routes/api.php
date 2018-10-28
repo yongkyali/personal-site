@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/bot/699808095:AAF58_xsFLR8knELwTvhG6fGr9nOWGnnpUk', 'BotController@webhook'); // Jasmine_bot API
