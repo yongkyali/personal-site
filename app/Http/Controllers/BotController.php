@@ -17,6 +17,6 @@ class BotController extends Controller
             'text' => $update,
         ]);
 
-        return true;
+        return;
     }
 }
