@@ -5,7 +5,7 @@
         <div class="col-12" style="margin: 150px 0">
           <h1>Projects</h1>
           <p>
-            Yongky currenly do develop, manage, plan as an IT Manager at
+            Yongky currenly do development, managing and planning as IT Manager at
             <a href="https://www.executivemedia.group" target="_blank">Executive Media</a>.
             <br />
             Here are some reference the projects:

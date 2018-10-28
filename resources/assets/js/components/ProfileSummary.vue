@@ -33,6 +33,7 @@
           <a href="https://github.com/yongkylie" target="_blank"><i class="mdi mdi-github-circle" aria-hidden="true"></i></a>
           <a href="https://twitter.com/yongkylie" target="_blank"><i class="mdi mdi-twitter" aria-hidden="true"></i></a>
           <a href="https://instagram.com/yongkyliee" target="_blank"><i class="mdi mdi-instagram" aria-hidden="true"></i></a>
+          <a href="https://medium.com/@yongkyliee" target="_blank"><i class="mdi mdi-medium" aria-hidden="true"></i></a>
           <a href="https://id.linkedin.com/in/yongkylie" target="_blank"><i class="mdi mdi-linkedin" aria-hidden="true"></i></a>
           <a href="https://stackoverflow.com/users/7498283/yongky" target="_blank"><i class="mdi mdi-stack-overflow" aria-hidden="true"></i></a>
         </div>
