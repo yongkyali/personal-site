@@ -29,7 +29,6 @@
               This website.
             </li>
           </p>
-
           <router-link :to="{ name: 'landing' }">Go Back </router-link>
         </div>
       </div>

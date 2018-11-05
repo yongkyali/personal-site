@@ -8,7 +8,6 @@
     },
     "private": true,
     "scripts": {
-        "postinstall": "npm run prod",
         "start": "npm run production",
         "dev": "npm run development",
         "development": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
