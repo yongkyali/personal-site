@@ -8,7 +8,8 @@ use Telegram;
 class BotController extends Controller
 {
     public function webhook() {
-        $response = Telegram::getWebhookUpdates();
+        $response = Telegram::commandsHandler(true);
+        // $response = Telegram::getWebhookUpdates();
 
         $update = json_encode($response);
 
