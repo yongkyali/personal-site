@@ -11,12 +11,12 @@ class BotController extends Controller
         $response = Telegram::commandsHandler(true);
         // $response = Telegram::getWebhookUpdates();
 
-        $update = json_encode($response);
+        // $update = json_encode($response);
 
-        Telegram::sendMessage([
-            'chat_id' => 276355562,
-            'text' => $update,
-        ]);
+        // Telegram::sendMessage([
+        //     'chat_id' => 276355562,
+        //     'text' => $update,
+        // ]);
 
         return;
     }
