@@ -17,4 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/bot/699808095:AAF58_xsFLR8knELwTvhG6fGr9nOWGnnpUk', 'BotController@webhook'); // Jasmine_bot API
+// Route::post('/webhook', 'BotController@webhook');
+// Route::post('/methodTester', 'BotController@methodTester');
+
+// Route::post('/tans-wardrobe/authenticate-instagram', 'InstagramApiController@authenticate');
+// Route::post('/tans-wardrobe/feed/remove', 'InstagramApiController@removeTimelinePost');

@@ -116,7 +116,7 @@ return [
     |
     */
     'commands'                     => [
-        Telegram\Bot\Commands\HelpCommand::class,
+        // Telegram\Bot\Commands\HelpCommand::class,
         // App\Http\Commands\StartCommand::class,
         // App\Http\Commands\IdCommand::class,
     ],
