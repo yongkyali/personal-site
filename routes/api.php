@@ -21,4 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::post('/methodTester', 'BotController@methodTester');
 
 // Route::post('/tans-wardrobe/authenticate-instagram', 'InstagramApiController@authenticate');
-// Route::post('/tans-wardrobe/feed/remove', 'InstagramApiController@removeTimelinePost');
+Route::post('/tans-wardrobe/feed/remove', 'InstagramApiController@removeTimelinePost');

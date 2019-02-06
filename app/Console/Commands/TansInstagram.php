@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use InstagramAPI\Instagram;
 use Telegram;
 use Carbon\Carbon;
+use App\Models\PostCode;
 
 class TansInstagram extends Command
 {
@@ -58,52 +59,17 @@ class TansInstagram extends Command
 
     private function retrievePostCodes($ig) {
         // Insomnia code : $.items[*].code
-        $post_codes = array();
-        $next_max_id = null;
-
-        for ($i = 0; $i < 3; $i++) {
-            if ($i > 0) {
-                sleep(3);
-            }
-            
-            if ($i == 0) {
-                $timeline = $ig->timeline->getSelfUserFeed();    
-            } else {
-                $timeline = $ig->timeline->getSelfUserFeed($next_max_id);
-            }
-
-            foreach ($timeline->getItems() as $post) {
-                array_push($post_codes, $post->getCode());
-            }
-        }
-
-        return $post_codes;
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle()
-    {
-        $ig = $this->authenticate('tansbeautyy', 'galaxygrand2');
-
-        Telegram::sendMessage([
-            "chat_id" => 276355562,
-            "text" => "Schedule started at: \n" . 
-                Carbon::now()->toDateTimeString(),
-        ]);
-
-        $post_codes = array();
         $exit_loop = false;
         $next_max_id = null;
 
         while ($exit_loop == false) {
-            $timeline = $ig->timeline->getSelfUserFeed($next_max_id);    
+            $timeline = $ig->timeline->getSelfUserFeed($next_max_id);
 
             foreach ($timeline->getItems() as $post) {
-                array_push($post_codes, $post->getId());
+                $post_code = new PostCode();
+                $post_code->instagram_username = 'tans.wardrobe';
+                $post_code->post_media_id = $post->getId();
+                $post_code->save();
             }
 
             if (!empty($timeline->getNextMaxId())) {
@@ -116,8 +82,43 @@ class TansInstagram extends Command
             //     $exit_loop = true;
             // }
 
-            sleep(3);
+            sleep(4);
         }
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        Telegram::sendMessage([
+            "chat_id" => 276355562,
+            "text" => "Schedule started at: \n" . 
+                Carbon::now()->toDateTimeString(),
+        ]);
+
+        $ig = $this->authenticate('tans.wardrobe', 'galaxygrand2');
+
+        Telegram::sendMessage([
+            "chat_id" => 276355562,
+            "text" => "Seeding post media ID started at: \n" . 
+                Carbon::now()->toDateTimeString(),
+        ]);
+
+        $this->retrievePostCodes($ig);
+
+        Telegram::sendMessage([
+            "chat_id" => 276355562,
+            "text" => "Done seeding post media ID started at: \n" . 
+                Carbon::now()->toDateTimeString(),
+        ]);
+
+        $post_codes = PostCode::where([
+            ['instagram_username', 'tans.wardrobe'],
+            ['post_deletion_status', 0],
+        ])->get();
 
         Telegram::sendMessage([
             "chat_id" => 276355562,
@@ -133,7 +134,10 @@ class TansInstagram extends Command
                     "text" => "postingan ke-" . $key,
                 ]);
 
-                $ig->media->delete($code);
+                $ig->media->delete($code->post_media_id);
+                $code->post_deletion_status = 1;
+                $code->save();
+
                 sleep(12);
             }
         } catch (\Exception $e) {
@@ -145,14 +149,7 @@ class TansInstagram extends Command
 
         Telegram::sendMessage([
             "chat_id" => 276355562,
-            "text" => 'task finished',
+            "text" => 'All task finished at: ' . Carbon::now()->toDateTimeString(),
         ]);
-
-        Telegram::sendMessage([
-            "chat_id" => 276355562,
-            "text" => Carbon::now()->toDateTimeString(),
-        ]);
-
-        echo "mantap, executed!\n";
     }
 }

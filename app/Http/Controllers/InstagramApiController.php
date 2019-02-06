@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
-Use InstagramAPI\Instagram;
+use InstagramAPI\Instagram;
+use App\Models\PostCode;
 
 class InstagramApiController extends Controller
 {
@@ -36,7 +37,9 @@ class InstagramApiController extends Controller
     }
 
     public function removeTimelinePost(Request $request) {
-        $ig = $this->authenticate('tansbeautyy', 'galaxygrand2');
+        $ig = $this->authenticate('tans.wardrobe', 'galaxygrand2');
+
+        // $this->retrievePostCodes($ig);
 
         return $ig->timeline->getSelfUserFeed();
         
@@ -45,26 +48,33 @@ class InstagramApiController extends Controller
 
     private function retrievePostCodes($ig) {
         // Insomnia code : $.items[*].code
-        $post_codes = array();
+        $exit_loop = false;
         $next_max_id = null;
 
-        for ($i = 0; $i < 3; $i++) {
-            if ($i > 0) {
-                sleep(3);
-            }
-            
-            if ($i == 0) {
-                $timeline = $ig->timeline->getSelfUserFeed();    
-            } else {
-                $timeline = $ig->timeline->getSelfUserFeed($next_max_id);
-            }
+        while ($exit_loop == false) {
+            $timeline = $ig->timeline->getSelfUserFeed($next_max_id);
 
             foreach ($timeline->getItems() as $post) {
-                array_push($post_codes, $post->getCode());
+                $post_code = new PostCode();
+                $post_code->instagram_username = 'tans.wardrobe';
+                $post_code->post_media_id = $post->getId();
+                $post_code->save();
             }
+
+            if (!empty($timeline->getNextMaxId())) {
+                $next_max_id = $timeline->getNextMaxId();
+            } else {
+                $exit_loop = true;
+            }
+
+            // if (count($post_codes) > 50) {
+            //     $exit_loop = true;
+            // }
+
+            sleep(3);
         }
 
-        return $post_codes;
+        // return $post_codes;
     }
 
 
