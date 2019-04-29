@@ -31,8 +31,8 @@ const router = new VueRouter({
             component: About,
         },
         {
-            path: '/project',
-            name: 'project',
+            path: '/myworks',
+            name: 'myworks',
             component: Project,
         },
         {

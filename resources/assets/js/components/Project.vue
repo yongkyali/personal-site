@@ -1,36 +1,32 @@
 <template>
-  <div class="container">
-    <div class="row full-height justify-content-center align-items-center">
-      <div class="row text-center-xs text-left-sm">
-        <div class="col-12" style="margin: 150px 0">
-          <h1>Projects</h1>
-          <p>
-            Yongky currenly do development, managing and planning as IT Manager at
-            <a href="https://www.executivemedia.group" target="_blank">Executive Media</a>.
-            <br />
-            Here are some reference the projects:
-            <li>
-              <a href="https://www.executivemafia.com" target="_blank">Executive Mafia</a>
-              : Influencer Network for Instagram.
-            </li>
-            <li>
-              <a href="https://executive-cart.com" target="_blank">Executive Cart</a>
-              : Influencer Marketplace for Instagram.
-            </li>
-            <li>
-              <a href="https://www.executivemedia.group" target="_blank">Executive Media</a>
-              : a company profile.
-            </li>
-            <li>
-              <a href="https://t.me/jesmin_bot" target="_blank">Jasmine Bot</a>
-              : Telegram bot as an assistant to Executive Mafia.
-            </li>
-            <li>
-              This website.
-            </li>
-          </p>
-          <router-link :to="{ name: 'landing' }">Go Back </router-link>
-        </div>
+  <div class="container d-flex flex-column justify-content-center">
+    <div class="my-5">
+      <h3>My works</h3>
+      <p>
+        I make websites and custom applications. I usually also do the design along the way. From programming perspective, I am familiar with React.JS, Python and PHP.
+      </p>
+      <p>
+        Here are some of projects I’ve done or working on:
+        <ul>
+          <li>Executive-X</li>
+          <li>House Of Leaders</li>
+          <li>Telegram PHP SDK</li>
+        </ul>
+      </p>
+
+      <div class="bottom-navigation">
+        <router-link
+          :to="{ name: 'about' }"
+          class="button button-back"
+        >
+          <span>Back: about</span>
+        </router-link>
+        <router-link
+          :to="{ name: 'contact' }"
+          class="button button-next"
+        >
+          <span>Next: contact</span>
+        </router-link>
       </div>
     </div>
   </div>
@@ -39,13 +35,6 @@
 <script>
   export default {
     mounted() {
-      console.log('Project page mounted!')
     } 
   }
 </script>
-
-<style>
-.row {
-  margin: 0 !important;
-}
-</style>

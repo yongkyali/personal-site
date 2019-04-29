@@ -1,39 +1,34 @@
 <template>
-  <div class="container banner">
-    <div class="row full-height justify-content-center align-items-center">
-      <div class="row text-center-sm text-left-md">
-        <div class="col-12">
-          <h1>Yongky Ali</h1>
-          <p>
-            Yongky Ali is a software developer who currently lives in <a href="https://en.wikipedia.org/wiki/Medan" target="_blank">Medan, North Sumatra, Indonesia.</a>
-          </p>
-          <p>
-            He currently work as IT Manager at <a href="https://executivemafia.com/about" target="_blank">
-            Executive Mafia</a>.
-            <br/>
-            Yongky build websites, bots, and some other software development stuff
-            everyday as a fulltime job at office.
-            <br />
-            He spend some time contributing to open source projects at Github and stackoverflow.
-            <br/>
-            He is an open-minded guy and hard working.
-            <br />
-            His hobbies are swimming and doing codes.
-            <br/>
-          </p>
-        </div>
-        <div class="col-12">
-          <router-link :to="{ name: 'landing' }">Go Back </router-link>
-        </div>
+  <div class="container d-flex flex-column justify-content-center">
+    <div class="my-5">
+      <h3>About me</h3>
+      <p>I am a software developer based in Medan, Indonesia. My passion in website and mobile-apps design makes me a full-stack software developer. I also speak in public sometimes.</p>
+      <p>Currently the CTO of Executive-X, a lively company which focus on digital marketing and influencers.</p>
+      <p>
+        I like to share my knowledge about programming and software development. If have any questions, don't hesitate to
+        <router-link :to="{ name: 'contact' }">drop me a mail</router-link>!
+      </p>
+
+      <div class="bottom-navigation">
+        <router-link
+          :to="{ name: 'landing' }"
+          class="button button-back"
+        >
+          <span>Back: to Home</span>
+        </router-link>
+        <router-link
+          :to="{ name: 'myworks' }"
+          class="button button-next"
+        >
+          <span>Next: my works</span>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    mounted() {
-      
-    }
-  }
+export default {
+  mounted() {}
+};
 </script>

@@ -1,6 +1,5 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
@@ -8,26 +7,115 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  color: #031D44;
+  font-size: 16px;
+  background-color: #EFF6F6;
 }
 
-.full-height {
-  height: 100vh;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gilroy', 'Open-sans';
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.landing-subtitle {
+  font-size: 1.2em;
+}
+
+.bottom-navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8em;
+  margin-top: 2em;
+
+  &.only-child {
+    justify-content: start;
+  }
+
+  .button {
+    border-radius: 2em;
+    padding: .8em 1.5em;
+    color: #6A6A6A;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    &.button-back {
+      span {
+        margin-left: 2em;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background-image: url('/images/arrow-back.svg');
+        background-size: cover;
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+
+    &.button-next {
+      span {
+        margin-right: .5em;
+      }
+      padding-right: 2.5em;
+
+      &:after {
+        content: "";
+        position: absolute;
+        background-image: url('/images/arrow-next.svg');
+        background-size: cover;
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  }
+  
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 24px;
+  }
 }
 
 a {
   color: #abbdcf;
+  transition: all .3s ease-in-out;
+
   &:hover {
-    color: #212529;
+    color: #031D44;
+    text-decoration: none;
   }
 }
 
 .small {
   font-size: .6rem;
 }
-
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
